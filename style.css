@@ -1,0 +1,137 @@
+/* ----------------------------- */
+/* ESTILO BASE — HORAS IGUAIS   */
+/* Azul bebê: #cfe9ff / #e8f4ff */
+/* ----------------------------- */
+
+:root {
+  --azul-bebe: #cfe9ff;
+  --azul-bebe-claro: #e8f4ff;
+  --azul-escuro: #0d1b2a;
+  --texto: #1a1a1a;
+  --branco: #ffffff;
+  --radius: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--azul-bebe-claro);
+  color: var(--texto);
+}
+
+/* HEADER */
+.site-header {
+  background: var(--azul-bebe);
+  padding: 20px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+}
+.brand h1 {
+  margin: 0;
+  font-size: 26px;
+  color: var(--azul-escuro);
+}
+.micro {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-top: -4px;
+}
+
+/* NAV */
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+.main-nav a {
+  text-decoration: none;
+  color: var(--azul-escuro);
+  font-weight: 600;
+  transition: 0.2s;
+}
+.main-nav a:hover {
+  opacity: 0.6;
+}
+
+/* HERO */
+.hero-pro {
+  padding: 60px 20px;
+  background: var(--azul-bebe-claro);
+  text-align: center;
+}
+.hero-pro-nome {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.hero-pro-desc {
+  font-size: 18px;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* CARDS */
+.index-cards {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+.index-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.index-card {
+  background: var(--branco);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  text-decoration: none;
+  color: var(--texto);
+  transition: 0.2s;
+}
+.index-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.12);
+}
+.index-card h3 {
+  margin-top: 0;
+  color: var(--azul-escuro);
+}
+
+/* PÁGINAS INTERNAS */
+.page {
+  max-width: 900px;
+  margin: 40px auto;
+  background: var(--branco);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+.page h1 {
+  color: var(--azul-escuro);
+}
+.page h2 {
+  margin-top: 30px;
+  color: var(--azul-escuro);
+}
+
+/* CARDS INDIVIDUAIS DAS HORAS */
+.hora-card {
+  background: var(--branco);
+  padding: 25px;
+  border-radius: var(--radius);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+.hora-card h2 {
+  color: var(--azul-escuro);
+  margin-top: 0;
+}
