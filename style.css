@@ -192,3 +192,29 @@ footer {
   .hero-pro-nome { font-size: 28px; }
   .index-cards-grid { grid-template-columns: 1fr; }
 }
+.logo {
+  height: 55px;
+  width: auto;
+  margin-right: 12px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-text h1 {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    height: 45px;
+  }
+
+  .brand {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
