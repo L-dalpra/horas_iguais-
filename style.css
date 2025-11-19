@@ -1,12 +1,6 @@
 /* ============================= */
 /* ESTILO BASE — HORAS IGUAIS   */
 /* Azul bebê: #cfe9ff / #e8f4ff */
-/* Ajustes finais:               */
-/* - Melhor responsividade       */
-/* - Espaçamento aprimorado      */
-/* - Layout mais limpo           */
-/* - Cartões mais suaves         */
-/* - Animações leves             */
 /* ============================= */
 
 :root {
@@ -15,9 +9,10 @@
   --azul-escuro: #0d1b2a;
   --texto: #1a1a1a;
   --branco: #ffffff;
-  --radius: 12px;
-  --shadow: 0 4px 10px rgba(0,0,0,0.08);
-  --shadow-hover: 0 6px 16px rgba(0,0,0,0.12);
+
+  --radius: 14px;
+  --shadow: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-hover: 0 8px 20px rgba(0,0,0,0.14);
 }
 
 body {
@@ -25,7 +20,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background: var(--azul-bebe-claro);
   color: var(--texto);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 /* HEADER */
@@ -37,6 +32,7 @@ body {
   top: 0;
   z-index: 1000;
 }
+
 .header-inner {
   display: flex;
   justify-content: space-between;
@@ -45,11 +41,14 @@ body {
   margin: auto;
   padding: 0 20px;
 }
+
 .brand h1 {
   margin: 0;
   font-size: 28px;
   color: var(--azul-escuro);
+  font-weight: 700;
 }
+
 .micro {
   font-size: 14px;
   opacity: 0.8;
@@ -62,18 +61,20 @@ body {
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 24px;
+  gap: 22px;
 }
+
 .main-nav a {
   text-decoration: none;
   color: var(--azul-escuro);
   font-weight: 600;
-  transition: 0.2s;
-  padding: 6px 10px;
-  border-radius: 6px;
+  transition: 0.25s;
+  padding: 6px 12px;
+  border-radius: 8px;
 }
+
 .main-nav a:hover {
-  background: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.7);
 }
 
 /* HERO */
@@ -82,15 +83,18 @@ body {
   background: var(--azul-bebe-claro);
   text-align: center;
 }
+
 .hero-pro-nome {
   font-size: 34px;
   margin-bottom: 12px;
+  color: var(--azul-escuro);
 }
+
 .hero-pro-desc {
   font-size: 19px;
   max-width: 650px;
   margin: auto;
-  opacity: 0.9;
+  opacity: 0.92;
 }
 
 /* CARDS */
@@ -99,11 +103,13 @@ body {
   margin: 60px auto;
   padding: 0 20px;
 }
+
 .index-cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
+  gap: 26px;
 }
+
 .index-card {
   background: var(--branco);
   padding: 24px;
@@ -114,13 +120,16 @@ body {
   transition: 0.25s ease;
   transform: translateY(0);
 }
+
 .index-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-hover);
 }
+
 .index-card h3 {
-  margin-top: 0;
+  margin: 0 0 8px;
   color: var(--azul-escuro);
+  font-size: 22px;
 }
 
 /* PÁGINAS INTERNAS */
@@ -133,16 +142,19 @@ body {
   box-shadow: var(--shadow);
   animation: fadeIn 0.4s ease;
 }
+
 .page h1 {
   color: var(--azul-escuro);
-  font-size: 30px;
+  font-size: 32px;
+  margin-top: 0;
 }
+
 .page h2 {
   margin-top: 32px;
   color: var(--azul-escuro);
 }
 
-/* CARDS INDIVIDUAIS */
+/* CARDS DAS HORAS INDIVIDUAIS */
 .hora-card {
   background: var(--branco);
   padding: 28px;
@@ -151,6 +163,7 @@ body {
   margin-bottom: 26px;
   transition: 0.25s;
 }
+
 .hora-card:hover {
   box-shadow: var(--shadow-hover);
 }
@@ -173,9 +186,9 @@ footer {
 
 /* RESPONSIVIDADE */
 @media (max-width: 768px) {
-  .header-inner { flex-direction: column; gap: 16px; }
+  .header-inner { flex-direction: column; gap: 16px; text-align: center; }
   .main-nav ul { flex-wrap: wrap; justify-content: center; }
-  .page { padding: 26px; }
+  .page { padding: 28px; }
   .hero-pro-nome { font-size: 28px; }
   .index-cards-grid { grid-template-columns: 1fr; }
 }
